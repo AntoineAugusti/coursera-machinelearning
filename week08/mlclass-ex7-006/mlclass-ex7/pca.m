@@ -23,6 +23,15 @@ S = zeros(n);
 covariance = (1 / m) * X' * X;
 [U, S, V] = svd(covariance);
 
+% To find the minimal value of K that retains 99% of the variance
+% diagonal = diag(S);
+% for i = 1:n
+% 	if ((1 - sum(diagonal(1:i)) / sum(diagonal)) <= 0.01)
+% 		disp(i)
+% 		break
+% 	end
+% end
+
 % =========================================================================
 
 end
